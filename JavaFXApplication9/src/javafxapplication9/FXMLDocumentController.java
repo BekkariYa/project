@@ -101,6 +101,8 @@ public class FXMLDocumentController implements Initializable {
         }
     }
         //////////////////Function to display questions in combox qusetion /////////////
+    ////////////////lkef,lkezjfmlkjzfemlker
+    /////////////////flkrjfelmkjrfzejmlrfkjmkjpoaeifjerlnfkekj
      private String[] quesStionList ={
         "Are you a Doctor ?","Are you an Employee?"
     };
