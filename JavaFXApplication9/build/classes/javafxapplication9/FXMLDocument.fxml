@@ -37,7 +37,7 @@
                         <URL value="@Logindisin.css" />
                      </stylesheets>
                   </PasswordField>
-                  <Button fx:id="su_signUpbtn" layoutX="18.0" layoutY="434.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="354.0" styleClass="login-btn" text="SignUp" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="434.0">
+                  <Button fx:id="su_signUpbtn" layoutX="18.0" layoutY="434.0" mnemonicParsing="false" onAction="#regbtn" prefHeight="60.0" prefWidth="354.0" styleClass="login-btn" text="SignUp" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="434.0">
                      <stylesheets>
                         <URL value="@Logindisin.css" />
                         <URL value="@Logindisin.css" />

@@ -4,9 +4,9 @@
  */
 package javafxapplication9;
 
-import com.mysql.jdbc.PreparedStatement;
-import com.sun.jdi.connect.spi.Connection;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,14 +27,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
-
 /**
  *
  * @author bekkari
  */
 public class FXMLDocumentController implements Initializable {
-    
-  
+
     @FXML
     private AnchorPane side_form;
     @FXML
@@ -63,91 +61,102 @@ public class FXMLDocumentController implements Initializable {
     private ComboBox<?> su_question;
     @FXML
     private Button side_Already;
-    
+
     private Connection connect;
-    private PreparedStatement prepare ;
+    private PreparedStatement prepare;
     private ResultSet result;
     private Alert alert;
-    public void regbtn(){
-        if(su_uesrname.getText().isEmpty() || su_password.getText().isEmpty()|| su_question.getSelectionModel().getSelectedItem()== null
-                ||su_ansewer.getText().isEmpty()){
-            alert =new Alert(Alert.AlertType.ERROR);
+
+    public void regbtn() {
+        if (su_uesrname.getText().isEmpty() || su_password.getText().isEmpty() || su_question.getSelectionModel().getSelectedItem() == null
+                || su_ansewer.getText().isEmpty()) {
+            alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error  Message ");
             alert.setHeaderText(null);
             alert.setContentText("Please fill all blank fields");
             alert.showAndWait();
-        }else{
+        } else {
             String regData = "INSERT INTO doctor_cicritaria(uesrname, password, question, ansewer)"
-                    +"VALUES(?,?,?,?)";
+                    + "VALUES(?,?,?,?)";
             connect = databases.connectDB();
             try {
-                prepare =connect.prepareStatement(regData);
+                prepare = connect.prepareStatement(regData);
                 prepare.setString(1, su_uesrname.getText());
                 prepare.setString(2, su_password.getText());
-                prepare.setString(3, (String)su_question.getSelectionModel().getSelectedItem());
+                prepare.setString(3, (String) su_question.getSelectionModel().getSelectedItem());
                 prepare.setString(4, su_ansewer.getText());
-                
+
                 prepare.executeUpdate();
-                
-            alert =new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("INFORMATION  Message ");
-            alert.setHeaderText(null);
-            alert.setContentText("Successfully registered Account !");
-            alert.showAndWait();
-                
-                
-            } catch (Exception e) { e.printStackTrace();
+
+                alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("INFORMATION  Message ");
+                alert.setHeaderText(null);
+                alert.setContentText("Successfully registered Account !");
+                alert.showAndWait();
+
+                su_uesrname.setText("");
+                su_password.setText("");
+                su_question.getSelectionModel().clearSelection();
+                su_ansewer.setText("");
+                TranslateTransition slider = new TranslateTransition();
+                slider.setNode(side_form);
+                slider.setToX(0);
+                slider.setDuration(Duration.seconds(.5));
+                slider.setOnFinished((ActionEvent e) -> {
+                    side_Already.setVisible(false);
+                    side_btn.setVisible(true);
+                });
+                slider.play();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
-        //////////////////Function to display questions in combox qusetion /////////////
-    ////////////////lkef,lkezjfmlkjzfemlker
-    /////////////////flkrjfelmkjrfzejmlrfkjmkjpoaeifjerlnfkekj
-     private String[] quesStionList ={
-        "Are you a Doctor ?","Are you an Employee?"
+    //////////////////Function to display questions in combox qusetion /////////////
+    ////////////////
+    private String[] quesStionList = {
+        "Are you a Doctor ?", "Are you an Employee?"
     };
-    public void reqLquestionList(){
+
+    public void reqLquestionList() {
         List<String> ListQ = new ArrayList<>();
-        for(String data:quesStionList ){
+        for (String data : quesStionList) {
             ListQ.add(data);
         }
         ObservableList ListData = FXCollections.observableArrayList(ListQ);
         su_question.setItems(ListData);
     }
+
     ///////////////////////////////////////
     @Override
-   
+
     public void initialize(URL url, ResourceBundle rb) {
         // TODO 
-    }    
+    }
 
     @FXML
     private void switchForm(ActionEvent event) {
         TranslateTransition slider = new TranslateTransition();
-        if(event.getSource() == side_btn){
+        if (event.getSource() == side_btn) {
             slider.setNode(side_form);
             slider.setToX(400);
             slider.setDuration(Duration.seconds(.5));
-            slider.setOnFinished((ActionEvent e)->{
-            side_Already.setVisible(true);
-            side_btn.setVisible(false);
-            reqLquestionList();  //Call the question function
+            slider.setOnFinished((ActionEvent e) -> {
+                side_Already.setVisible(true);
+                side_btn.setVisible(false);
+                reqLquestionList();  //Call the question function
             });
             slider.play();
-            }else if (event.getSource() == side_Already){
-                slider.setNode(side_form);
-                slider.setToX(0);
-                slider.setDuration(Duration.seconds(.5));
-            slider.setOnFinished((ActionEvent e)->{
-            side_Already.setVisible(false);
-            side_btn.setVisible(true);
+        } else if (event.getSource() == side_Already) {
+            slider.setNode(side_form);
+            slider.setToX(0);
+            slider.setDuration(Duration.seconds(.5));
+            slider.setOnFinished((ActionEvent e) -> {
+                side_Already.setVisible(false);
+                side_btn.setVisible(true);
             });
             slider.play();
-            }
-            }
-       
-  
-    
-}
-    
+        }
+    }
 
+}

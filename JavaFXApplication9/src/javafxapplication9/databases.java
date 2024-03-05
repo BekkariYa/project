@@ -4,8 +4,10 @@
  */
 package javafxapplication9;
 
-import com.sun.jdi.connect.spi.Connection;
+
 import java.sql.DriverManager;
+
+import java.sql.Connection;
 
 /**
  *
