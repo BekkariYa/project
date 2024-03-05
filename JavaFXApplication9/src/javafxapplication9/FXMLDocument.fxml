@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication9.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="su_signupform" prefHeight="606.0" prefWidth="390.0" styleClass="white-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="su_ansewer" layoutX="18.0" layoutY="371.0" prefHeight="45.0" prefWidth="354.0" promptText="Ansewer" styleClass="textfield" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="371.0">
+                     <stylesheets>
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                     </stylesheets>
+                  </TextField>
+                  <TextField fx:id="su_uesrname" layoutX="18.0" layoutY="180.0" prefHeight="45.0" prefWidth="354.0" promptText="Uesrname" styleClass="textfield" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="180.0">
+                     <stylesheets>
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                     </stylesheets>
+                  </TextField>
+                  <PasswordField fx:id="su_password" layoutX="18.0" layoutY="240.0" prefHeight="45.0" prefWidth="354.0" promptText="Password" styleClass="textfield" AnchorPane.bottomAnchor="315.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="240.0">
+                     <stylesheets>
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                     </stylesheets>
+                  </PasswordField>
+                  <Button fx:id="su_signUpbtn" layoutX="18.0" layoutY="434.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="354.0" styleClass="login-btn" text="SignUp" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="434.0">
+                     <stylesheets>
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                     </stylesheets>
+                  </Button>
+                  <Label layoutX="29.0" layoutY="102.0" styleClass="head-label" stylesheets="@Logindisin.css" text="Register Account" textFill="#098c53">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="su_question" layoutX="18.0" layoutY="300.0" prefHeight="50.0" prefWidth="354.0" promptText="Question" styleClass="textfield" stylesheets="@Logindisin.css" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="300.0" />
+               </children>
+               <stylesheets>
+                  <URL value="@Logindisin.css" />
+                  <URL value="@Logindisin.css" />
+                  <URL value="@Logindisin.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane fx:id="si_loginform" layoutX="557.0" layoutY="76.0" prefHeight="200.0" prefWidth="200.0" styleClass="white-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="si_uesrname" layoutX="18.0" layoutY="230.0" prefHeight="45.0" prefWidth="354.0" promptText="Uesrname" styleClass="textfield" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="230.0">
+                     <stylesheets>
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                     </stylesheets>
+                  </TextField>
+                  <PasswordField fx:id="si_password" layoutX="18.0" layoutY="290.0" prefHeight="45.0" prefWidth="354.0" promptText="Password" styleClass="textfield" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="290.0">
+                     <stylesheets>
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                     </stylesheets>
+                  </PasswordField>
+                  <Button fx:id="si_login_btn" layoutX="18.0" layoutY="390.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="354.0" styleClass="login-btn" text="Login" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="390.0">
+                     <stylesheets>
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                        <URL value="@Logindisin.css" />
+                     </stylesheets>
+                  </Button>
+                  <Hyperlink fx:id="si_forgot" layoutX="18.0" layoutY="344.0" text="Forgot password?" AnchorPane.bottomAnchor="227.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="344.0" />
+                  <Label layoutX="29.0" layoutY="102.0" styleClass="head-label" stylesheets="@Logindisin.css" text="Login Account " textFill="#098c53" AnchorPane.bottomAnchor="453.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="102.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+               <stylesheets>
+                  <URL value="@Logindisin.css" />
+                  <URL value="@Logindisin.css" />
+                  <URL value="@Logindisin.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane fx:id="side_form" layoutX="7.0" prefHeight="600.0" prefWidth="394.0" styleClass="gradient" stylesheets="@Logindisin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="side_btn" layoutX="23.0" layoutY="508.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="60.0" prefWidth="354.0" styleClass="Create-btn" stylesheets="@Logindisin.css" text="Create new Account" />
+                  <Button fx:id="side_Already" layoutX="23.0" layoutY="508.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="60.0" prefWidth="354.0" styleClass="Create-btn" stylesheets="@Logindisin.css" text="Already have an Account" visible="false" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="508.0" />
+                  <Label layoutX="93.0" layoutY="443.0" text="Create Account" textFill="#fcf8f8" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="104.0" AnchorPane.topAnchor="443.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="205.0" fitWidth="146.0" layoutX="124.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="325.156005859375" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="83.0">
+                     <image>
+                        <Image url="@images/—Pngtree—organ%20tooth%20cartoon%20illustration_4647365.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="283.0" text="Système de clinique dentaire" textFill="#fffbfb">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
