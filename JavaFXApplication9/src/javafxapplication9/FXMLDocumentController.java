@@ -67,6 +67,7 @@ public class FXMLDocumentController implements Initializable {
     private ResultSet result;
     private Alert alert;
 
+    @FXML
     public void regbtn() {
         if (su_uesrname.getText().isEmpty() || su_password.getText().isEmpty() || su_question.getSelectionModel().getSelectedItem() == null
                 || su_ansewer.getText().isEmpty()) {
